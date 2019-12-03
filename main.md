@@ -10,7 +10,7 @@ More complex is the PUBLIQ Channel layer, which involves central components oper
 #### PUBLIQ Blockchain
 [publiq.pp](https://github.com/publiqnet/publiq.pp "publiq.pp") - repository is the core component, that includes blockchain layer, distributed storage layer implementations and important endpoints that the Channel layer operates with.
 
-The publiq.pp [readme](https://github.com/publiqnet/publiq.pp/blob/master/README.md "readme") document describes how to build the blockchain node from source. The main product from this repository is the `publiqd` executable.
+The publiq.pp [readme](https://github.com/publiqnet/publiq.pp/blob/master/README.md "publiq.pp") document describes how to build the blockchain node from source. The main product from this repository is the `publiqd` executable.
 
 The publiq.pp [wiki](https://github.com/publiqnet/publiq.pp/wiki "wiki") covers more details on how to run the `publiqd` blockchain node, for different uses.
 
@@ -31,3 +31,4 @@ In particular
 1. and the _Storage Order Token Generator endpoint_. This is a small utility, that is responsible for creating authorization tokens for storage nodes.
 
 The next core component of _Channel layer_ is the **State DB**. [new-blockchain-state](https://github.com/publiqnet/new-blockchain-state "new-blockchain-state") is the repository responsible for this. The [readme](https://github.com/publiqnet/new-blockchain-state/blob/master/README.md "new-blockchain-state") describes how to setup and configure this component. In particular, it also covers the endpoints from above list.
+The configuration variables rely on couple external components - the _OAuth_, and the _Language Detection_ services. The OAuth configuration default value refers to a working setup. And the language detection service will be explained later, for now it can be left empty as it is not essential for _State DB_. Configured cron jobs will build a MySQL DB with full information about the blockchain network state.
