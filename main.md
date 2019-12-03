@@ -17,7 +17,7 @@ The publiq.pp [wiki](https://github.com/publiqnet/publiq.pp/wiki "wiki") covers 
 #### PUBLIQ Distributed Storage
 [Storage node](https://github.com/publiqnet/publiq.pp/wiki/1.6-Storage-node "wiki") wiki page describes how to run a storage node for testnet.
 
-This is the same publiqd executable configured in a special way to copy files to its own storage, and be a storage server. It is the Channel layers duty to collect storage nodes' activity information and to redirect file requests to storage nodes.
+This is the same publiqd executable configured in a special way to copy files to its own storage, and be a storage server. It is the `Channel layer's` duty to analyze storage nodes' activity information and to redirect file requests to storage nodes.
 
 #### PUBLIQ Channel
 [Channel node](https://github.com/publiqnet/publiq.pp/wiki/1.7-Channel-setup "wiki") wiki page of [publiq.pp](https://github.com/publiqnet/publiq.pp "publiq.pp") repository describes details how to configure PUBLIQ Channel core components with `publiqd` executable.
@@ -29,3 +29,5 @@ In particular
 1. the _Channel node rpc endpoint_ is used, again by channel back-end, to upload files to _Channel node storage_ or to report statistics.
 1. the _Channel node storage endpoints_ to serve files over http or https protocol.
 1. and the _Storage Order Token Generator endpoint_. This is a small utility, that is responsible for creating authorization tokens for storage nodes.
+
+The next core component of _Channel layer_ is the **State DB**. [new-blockchain-state](https://github.com/publiqnet/new-blockchain-state "new-blockchain-state") is the repository responsible for this. The [readme](https://github.com/publiqnet/new-blockchain-state/blob/master/README.md "new-blockchain-state") describes how to setup and configure this component. In particular, it also covers the endpoints from above list.
