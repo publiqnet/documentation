@@ -45,3 +45,4 @@ This will be referenced from Frontend configuration below, called a _Backend_.
 The frontend is configured to work with backend using the files in _publiq-frontend-demo/projects/publishing-platform-app/src/environments_.
 More details are available in [readme](https://github.com/publiqnet/publiq-frontend-demo/blob/master/README.md "readme")
 
+The user facing result of this configuration will be the channel website, for example with such url https://publiq.example.com.
