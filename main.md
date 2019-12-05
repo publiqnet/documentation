@@ -36,6 +36,10 @@ In particular
 The next core component of _Channel layer_ is the **State DB and Backend**. [new-blockchain-state](https://github.com/publiqnet/new-blockchain-state "new-blockchain-state") is the repository responsible for this. The [readme](https://github.com/publiqnet/new-blockchain-state/blob/master/README.md "new-blockchain-state") describes how to setup and configure this component. In particular, it also covers the endpoints from above list.
 The configuration variables rely on couple external components - the _OAuth_, and the _Language Detection_ services. The OAuth configuration default value refers to a working setup. And the language detection service will be explained later, for now it can be left empty as it is not essential for _State DB and Backend_. Configured cron jobs will build a MySQL DB with full information about the blockchain network state.
 
+An important result of this configuration will be a REST API hosted by some address. For example https://publiq-api.example.com.
+This will be referenced from Frontend configuration below, called a _Backend_.
+
+
 ##### Web Frontend
 [publiq-frontend-demo](https://github.com/publiqnet/publiq-frontend-demo "publiq-frontend-demo") is a sample PUBLIQ channel interface. It is intended to be just an example, and will vary greatly depending on a given channel business logic and architecture.
 The frontend is configured to work with backend using the files in _publiq-frontend-demo/projects/publishing-platform-app/src/environments_.
