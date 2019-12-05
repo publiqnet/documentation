@@ -20,6 +20,8 @@ The publiq.pp [wiki](https://github.com/publiqnet/publiq.pp/wiki "wiki") covers 
 This is the same publiqd executable configured in a special way to copy files to its own storage, and be a storage server. It is the `Channel layer's` duty to analyze storage nodes' activity information and to redirect file requests to storage nodes.
 
 #### PUBLIQ Channel
+
+##### Blockchain nodes
 [Channel node](https://github.com/publiqnet/publiq.pp/wiki/1.7-Channel-setup "wiki") wiki page of [publiq.pp](https://github.com/publiqnet/publiq.pp "publiq.pp") repository describes details how to configure PUBLIQ Channel core components with `publiqd` executable.
 
 These define endpoints that are configured also for use by channel web components.
@@ -30,5 +32,6 @@ In particular
 1. the _Channel node storage endpoints_ to serve files over http or https protocol.
 1. and the _Storage Order Token Generator endpoint_. This is a small utility, that is responsible for creating authorization tokens for storage nodes.
 
+##### Web Backend
 The next core component of _Channel layer_ is the **State DB and Backend**. [new-blockchain-state](https://github.com/publiqnet/new-blockchain-state "new-blockchain-state") is the repository responsible for this. The [readme](https://github.com/publiqnet/new-blockchain-state/blob/master/README.md "new-blockchain-state") describes how to setup and configure this component. In particular, it also covers the endpoints from above list.
 The configuration variables rely on couple external components - the _OAuth_, and the _Language Detection_ services. The OAuth configuration default value refers to a working setup. And the language detection service will be explained later, for now it can be left empty as it is not essential for _State DB and Backend_. Configured cron jobs will build a MySQL DB with full information about the blockchain network state.
